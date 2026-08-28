@@ -82,11 +82,17 @@ def bullets(items):
     for it in items:
         story.append(Paragraph(it, styles["bullet"], bulletText="-"))
 
+# Hyperlink within a Paragraph. ReportLab renders <link> as a clickable anchor.
+def slink(url, text):
+    return f'<link href="{url}"><u><font color="#1155cc">{text}</font></u></link>'
+
 # Header
 story.append(Paragraph("JAGADISH SAMUDRALA", styles["name"]))
 story.append(Paragraph("Software Engineer | AI/ML &amp; GenAI Builder", styles["role"]))
 story.append(Paragraph(
-    "jagadish0828@gmail.com | +91-6305530851 | linkedin.com/in/jagadish-samudrala-48407b219 | github.com/JAGADISH3723",
+    f"{slink('mailto:jagadish0828@gmail.com', 'jagadish0828@gmail.com')} | +91-6305530851 | "
+    f"{slink('https://linkedin.com/in/jagadish-samudrala-48407b219', 'linkedin.com/in/jagadish-samudrala-48407b219')} | "
+    f"{slink('https://github.com/JAGADISH3723', 'github.com/JAGADISH3723')}",
     styles["contact"],
 ))
 story.append(Paragraph(
@@ -132,6 +138,8 @@ projects = [
             "Followed Git-based Agile development practices.",
         ],
         "tech": "React.js, TypeScript, Context API, Node.js, Express.js, MongoDB, Git, Agile",
+        "github": "https://github.com/JAGADISH3723",
+        "demo": "https://jagadish3723.github.io/ideas-sharing-platform/",
     },
     {
         "title": "Custom LLM-Powered QA Bot",
@@ -144,6 +152,8 @@ projects = [
             "Debugged retrieval timeouts and evaluated responses across different user intents.",
         ],
         "tech": "Python, LangChain, GPT-4, FAISS, OpenAI API, RAG",
+        "github": "https://github.com/JAGADISH3723/LLM_ChatBot",
+        "demo": None,
     },
     {
         "title": "Zepto E-commerce Inventory Data Analysis",
@@ -156,6 +166,8 @@ projects = [
             "Extracted buying and inventory trends for analytical decision-making.",
         ],
         "tech": "SQL, PostgreSQL, Python, Pandas",
+        "github": "https://github.com/JAGADISH3723",
+        "demo": None,
     },
 ]
 
@@ -168,6 +180,13 @@ for p in projects:
     for it in p["bullets"]:
         block.append(Paragraph(it, styles["bullet"], bulletText="-"))
     block.append(Paragraph("<b>Tech:</b> " + p["tech"], styles["tech"]))
+    links = []
+    if p.get("github"):
+        links.append(slink(p["github"], "GitHub"))
+    if p.get("demo"):
+        links.append(slink(p["demo"], "Live Demo"))
+    if links:
+        block.append(Paragraph(" | ".join(links), styles["tech"]))
     story.append(KeepTogether(block))
 
 # Problem Solving

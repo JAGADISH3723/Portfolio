@@ -204,7 +204,12 @@ export const CP_PLATFORMS = [
   { name: "LeetCode", user: "Jagadish3723", url: PROFILE.leetcode, color: "#ffa116" },
   { name: "CodeChef", user: "jagadish_3723", url: PROFILE.codechef, color: "#8b7cf6" },
   { name: "Codeforces", user: "jaggu_73", url: PROFILE.codeforces, color: "#e0a13a" },
-  { name: "GeeksforGeeks", user: "JAGADISH3723", url: PROFILE.github, color: "#2f8f46" },
+  {
+    name: "GeeksforGeeks",
+    user: "sj22mmoafc",
+    url: "https://www.geeksforgeeks.org/profile/sj22mmoafc?tab=activity",
+    color: "#2f8f46",
+  },
 ];
 
 export const DSA_STEPS = ["Understand", "Break Down", "Optimize", "Implement", "Test"];
@@ -228,7 +233,7 @@ export const EDUCATION = [
     school: "National Institute of Technology, Warangal",
     degree: "Bachelor of Technology (B.Tech)",
     detail: "Batch of 2026",
-    period: "Apr 2024 – 2026",
+    period: "Oct 2022 – 2026",
   },
   {
     school: "Sai Shivani Junior College",

@@ -64,7 +64,7 @@ export function Navbar({ onOpenPalette }: { onOpenPalette: () => void }) {
               <span className="font-mono">⌘K</span>
             </button>
             <a
-              href="/resume.pdf"
+              href="resume.pdf"
               download="Jagadish_Samudrala_Resume.pdf"
               className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-md bg-accent text-bg text-sm font-medium hover:bg-accent-soft transition-colors"
             >
@@ -123,7 +123,7 @@ export function Navbar({ onOpenPalette }: { onOpenPalette: () => void }) {
                   <Search size={16} /> Command Palette
                 </button>
                 <a
-                  href="/resume.pdf"
+                  href="resume.pdf"
                   download
                   onClick={() => setOpen(false)}
                   className="flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-accent text-bg font-medium"

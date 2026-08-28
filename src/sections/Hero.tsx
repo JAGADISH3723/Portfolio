@@ -150,7 +150,7 @@ export function Hero() {
               </button>
             </Magnetic>
             <a
-              href="/resume.pdf"
+              href="resume.pdf"
               download="Jagadish_Samudrala_Resume.pdf"
               className="flex items-center gap-2 rounded-md border border-border px-5 py-3 text-sm font-medium text-ink hover:border-accent/50 hover:text-accent transition-colors"
             >

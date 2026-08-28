@@ -189,7 +189,7 @@ bullets([
 # Education
 h2("EDUCATION")
 for line in [
-    "<b>National Institute of Technology, Warangal</b> - B.Tech, Batch of 2026 (Apr 2024 - 2026)",
+    "<b>National Institute of Technology, Warangal</b> - B.Tech, Batch of 2026 (Oct 2022 - 2026)",
     "<b>Sai Shivani Junior College</b> - State Board of Intermediate Education (2019 - 2021)",
 ]:
     story.append(Paragraph(line, styles["body"]))

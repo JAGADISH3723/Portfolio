@@ -51,7 +51,7 @@ export function CommandPalette({ open, onClose }: { open: boolean; onClose: () =
     } else if (cmd.type === "link") {
       window.open(cmd.url, "_blank", "noopener");
     } else {
-      window.location.href = "/resume.pdf";
+      window.location.href = import.meta.env.BASE_URL + "resume.pdf";
     }
   };
 

@@ -5,7 +5,7 @@ import { PROFILE } from "../data/content";
 
 export function ResumeCTA() {
   const actions = [
-    { label: "Download Resume", href: "/resume.pdf", download: true, icon: Download, primary: true },
+    { label: "Download Resume", href: "resume.pdf", download: true, icon: Download, primary: true },
     { label: "View GitHub", href: PROFILE.github, icon: GithubIcon },
     { label: "Connect on LinkedIn", href: PROFILE.linkedin, icon: LinkedinIcon },
     { label: "Email Me", href: `mailto:${PROFILE.email}`, icon: Mail },
